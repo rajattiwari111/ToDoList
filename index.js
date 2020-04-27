@@ -25,3 +25,18 @@ function(){
             });
         };
 });
+function Function1(a){
+    document.getElementById('Headline').innerHTML='Topic 1';
+}
+function Function2(b){
+    document.getElementById('Headline').innerHTML='Topic 2';
+}
+function Function3(c){
+    document.getElementById('Headline').innerHTML='Topic 3';
+}
+function Function4(d){
+    document.getElementById('Headline').innerHTML='<input class="input-group input-group-sm" id="NewList" type="text" value="New List"></input><input class="btn btn-primary btn-sm" id="NewList1" type="submit" value="Submit">';
+}
+function Function5(e){
+    document.getElementById("Date").innerHTML=Date();
+}

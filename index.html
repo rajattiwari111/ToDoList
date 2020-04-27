@@ -10,7 +10,23 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <title>ToDo-WebApp</title>
     </head>
-    <body>
+    <body onload="Function5('e')">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a onclick="Function1('a')" id="ADD1" class="nav-link" href="#">Topic 1</a>
+        </li>
+        <li class="nav-item">
+            <a onclick="Function2('b')" id="ADD2" class="nav-link" href="#">Topic 2</a>
+        </li>
+        <li class="nav-item">
+            <a onclick="Function3('c')" id="ADD3" class="nav-link" href="#">Topic 3</a>
+        </li>
+        <li class="nav-item">
+            <a onclick="Function4('d')" id="ADD4" class="nav-link" href="#">Add More</a>
+        </li>
+    </ul>
+    <br>
+    <h4 id="Headline">Topic 1</h4>
         <section id="main">
             <div class="container">
                 <div class="row">
@@ -18,7 +34,7 @@
         <h2>To DO</h2>
         <div ng-controller="TodoListController as todoList">
             <span>{{todoList.remaining()}} of {{todoList.tools.length}} remaining</span>
-         <button> <a href="" ng-click="todoList.archive()">Archive</a></button>  
+         <button class="click"> <a href="" ng-click="todoList.archive()">Archive</a></button>  
             <ul class="unstyled">
                 <li ng-repeat="todo in todoList.todos">
                     <label class="checkbox">
@@ -28,8 +44,8 @@
                 </li>
             </ul>
             <form ng-submit="todoList.addTodo()">
-                <input type="text" ng-model="todoList.todoText" size="30" placeholder="Add new todo here">
-                <input class="btn-primary" type="submit" value="add">
+                <input type="text" ng-model="todoList.todoText" class="adder" placeholder="Add new todo here">
+                <input class="btn-primary" type="submit" value="Add new Todo">
             </form>
         </div>
     </div>
